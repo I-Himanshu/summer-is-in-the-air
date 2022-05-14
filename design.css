@@ -1,0 +1,212 @@
+*{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #68b;
+    
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 100vw;
+    position: fixed;
+    background: #111;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+}
+.header ul li{
+    display: inline;
+}
+.header ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    transition: 600ms;
+    border-radius: 3px;
+}
+.header ul li a:hover{
+    color: black;
+    background-color: #fff;
+}
+.header ul li a::after,.header ul li a::before{
+    content: "";
+    height: 5px;
+    width: 0%;
+    background-color: red;
+    position: absolute;
+    bottom: -7px;
+    transition: 500ms;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+.header ul li a::before{
+    top: -7px;
+}
+.header ul li:hover a::after,.header ul li:hover a::before{
+    width: 100%;
+}
+
+.quoteCon{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    background-image: url(beach.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+.quoteBox p{
+    color: #fff;
+    max-width: 60vw;
+    font-size: 2vw;
+}
+.quoteBox a{
+    text-decoration: none;
+    padding: 10px;
+    transition: 300ms;
+}
+.quoteBox a:nth-child(1){
+    background: #fff;
+    color: red;
+}
+.quoteBox a:nth-child(2){
+    background: #4e07f6;
+    color: #ddd;
+}
+.quoteBox a:nth-child(1):hover{
+    background: #ff0000;
+    color: #ffffff;
+    box-shadow: 0 0 10px 0px red;
+
+}
+.quoteBox a:nth-child(2):hover{
+    background: #ff0000;
+    color: #4e07f6;
+    box-shadow: 0 0 50px 0px red;
+}
+#features{
+    min-height: 100vh;
+    width: 100vw;
+    background: rgb(199, 216, 221);
+    display: grid;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 70px;
+    background-image: url(https://cdn.pixabay.com/photo/2016/03/04/19/36/beach-1236581_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+#features .card{
+    max-width: 300px;
+    background: #fff;
+    text-align: center;
+    transition: 1s;
+}
+.card *{
+    transition: 700ms;
+}
+.imgBox{
+    margin-top: -35px;
+}
+.imgBox img{
+    max-height: 300px;
+    max-width: 250px;
+}
+.conBox{
+    padding: 20px;
+}
+.conBox h2{
+    margin-top: -20px;
+}
+.conBox p{
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+.card:hover .imgBox{
+    margin-top: -10px;
+}
+.card:hover .conBox h2{
+    margin-top: 0px;
+}
+.card:hover .conBox p{
+    height: auto;
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+#about{
+    text-align: center;
+    min-height: 100vh;
+    background-image: url(https://cdn.pixabay.com/photo/2019/07/04/17/11/summer-4316939_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#about fieldset{
+    min-width: 300px;
+    max-width: 600px;
+    width: 400px;
+    margin: 0 auto;
+    border: 10px double white;
+    max-width: 90vw;
+}
+#about fieldset legend{
+    margin-inline: 10px;
+}
+#about h1,#contact h1{ 
+    text-shadow: 0 0 5px red;
+}
+#about{
+    color: white;
+}
+#about .dp{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+footer{
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+#contact{
+    text-align: center;
+    min-height: 100vh;
+    background-image: url(https://cdn.pixabay.com/photo/2014/02/27/16/10/tree-276014__480.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110vh;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+#contact .contact{
+    background: #fff5;
+    padding: 70px 90px;
+    width: 300px;
+}
